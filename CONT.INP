@@ -1,0 +1,57 @@
+******************************************************************
+*    ********    Input of subroutine CONT  *******
+*
+* IOPT   = option for potentials: 1 (2) for Woods-Saxon (M3Y)
+* NPNTS =  no. of integration points in radial coordinate ( < 10000)
+* RMAX  =  maximum radius size (< 250 fm)
+* NEPTS =  number of points in energy ( < 1000)
+*
+* IOPT      NPNTS      RMAX      NEPTS
+*  
+  1         9999       250.      200
+*
+* V0  =  depth of central potential     
+* VS0 =  depth of spin-orbit potential 
+* R0  =  radius of the potential     
+* AA  =  diffuseness of the potential 
+* RS0 =  radius of the spin-orbit potential  
+* AAS =  diffuseness of the spin-orbit potential 
+* RC  =  Coulomb radius (usually RC = R0)  
+*----------------------------------------------------------------
+*  WS =  V_0 f(r,R0,AA) - V_S0 (l.s) (r_0^2/r) d/dr f(r,RS0,AAS) 
+*  
+*  f(r,R0,A) = [ 1 + exp((r-R0)/a) ]^(-1)
+*
+*  r_0 = 1.4138 fm is the Compton wavelength of the pion. 
+* (if IOPT=2 insert a "*" at the input line)
+*----------------------------------------------------------------
+* V0         R0      AA     VS0     RS0      AAS     RC
+*
+  -100.68    1.352    0.30   -0.0    1.352    0.30    1.352
+*  -37.30   2.600    0.65   -0.0    2.600    0.65    2.60
+*
+* If IOPT = 2, or else (but not 1), enter FC, FSO and RC:
+*    (in this case, insert a '*' sign in above row, or delete it)
+* FC      = multiplicative factor of central part of M3Y potential
+* FSO     = multiplicat. factor of spin-orbit part of M3Y potential
+* RC      =  Coulomb radius   
+* (if IOPT=1 insert a "*" at the input line)
+*
+*  FC        FSO       RC
+*   1.5       0.2       2.391
+*
+* Z1, Z2 =  charges of the nuclei
+* A1, A2 =  masses of the nuclei (in nucleon mass units) 
+*
+* Z1    A1    Z2    A2
+*
+  1.    1.    4.     9.
+*
+* EI, EF =  initial energy, final energy, energy step
+* L, J   =  orbital angular momentum, single-particle angular momentum j (l+s) 
+* 
+* EI     EF    L      J
+*
+  0.00   2     1     0.5     
+*
+******************************************************************

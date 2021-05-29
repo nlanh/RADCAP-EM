@@ -1,0 +1,29 @@
+******************************************************************
+*    ********    Input of subroutine OMP_M3Y   *******
+*
+* IOPT  =  Option for densities: 0 Gaussian or Woods-Saxon
+*                                1 densities entered in DENS.INP
+* NPNTS =  number of points in the radial mesh 
+* RMAX  =  maximum radius size (fm)
+*
+* IOPT     NPTS    RMAX
+*
+  1        500     25.
+*
+* If IOPT = 0, enter density parameters: 
+* (if IOPT=1 inser a "*" at the input line)
+* R1, D1  =  Woods-Saxon form (radius and diffuseness)
+* R2, D2  =  Same for density of nucleus 2
+* For Gaussian densities, enter D1=0, or D2=0
+*
+* R1      D1     R2     D2
+*
+*  0.7     0.    1.96    0.  
+*
+* Mass numbers 
+*
+* A1      A2
+*
+  1.      9.  
+*
+******************************************************************

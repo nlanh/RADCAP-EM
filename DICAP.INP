@@ -1,0 +1,99 @@
+******************************************************************
+*   ********    Input of program DICAP  *******
+*
+* IOPT   = option for potentials: 1 (2) for Woods-Saxon (M3Y)
+* NPNTS = no. of integration points in radial coordinate ( < 10000)
+* RMAX = maximum radius size (< 250 fm). 
+* NEPTS = number of points in energy ( < 1000)
+*
+* IOPT    NPNTS    RMAX     NEPTS
+*  
+  1       9999     50.      200
+*
+* N_0  =  nodes of the G.S. wave function 
+* AIA  =  spin of the particle A (core)
+* AIB  =  intrinsic spin of the particle B 
+* AIC  =  total angular momentum of the ground state of C = A + B
+*         (channel spin)
+* AJ0   =  single-particle angular momentum 
+* L0   =  orbital angular momentum
+* EBOUND = binding energy of the ground state (absolute value)
+*
+* N_0    AIA     AIB     AIC     AJ0      L_0      EBOUND
+*
+  0      1.5     0.5     1.0     0.5      1        6.585
+*
+* JOPT = 1 (0) if final state ang. mom., AICF, is (is not) to be
+*        summed over all possible values. If JOPT=1, AICF  can be 
+*        entered as any value.
+* AICF =  spin of the excited state after all ang. mom. coupling
+*         (channel spin)
+*
+* JOPT     AICF
+*
+  1        1
+* Z1, Z2 = charges of the nuclei
+* A1, A2 = masses of the nuclei (in nucleon mass units) 
+*
+* Z1      A1     Z2     A2
+*
+   1.     1.     4.     9.  
+*  
+* V0   =  depth of central potential 
+* R0   =  radius of the central potential 
+* AA   =  diffuseness of the central potential 
+* VS0  =  depth of spin-orbit potential 
+* RS0  =  radius of the spin-orbit potential 
+* AAS  =  diffuseness of the spin-orbit potential 
+* RC   =  Coulomb radius (usually, RC = R0)  
+*-----------------------------------------------------------------
+*  WS  =  V_0 f(r,R0,AA) - V_S0 (l.s) (r_0^2/r) d/dr f(r,RS0,AAS) 
+*  
+*  f(r,R0,a) = [ 1 + exp((r-R_0)/a) ]^(-1)
+*
+*  r_0 = 1.4138 fm is the Compton wavelength of the pion. 
+* (if IOPT=2 insert a "*" at the input line)
+*-----------------------------------------------------------------
+* V0        R0       AA     VS0     RS0      AAS     RC
+*
+  -100.68   1.352     0.30   -00.0   1.352    0.30    1.352
+*
+* If IOPT = 2, or else (but not 1), enter FC, FSO and RC:
+*    (in this case, insert a '*' sign in above row, or delete it)
+* FC      = multiplicative factor of central part of M3Y potential
+* FSO     = multiplicat. factor of spin-orbit part of M3Y potential
+* RC      =  Coulomb radius   
+* (if IOPT=1 insert a "*" at the input line)
+*
+*  FC        FSO       RC
+*   1.5       0.2       2.391
+*
+* EI,EF =  initial relative energy, final relative energy
+* 
+* EI       EF    
+*
+  0.0       2.0   
+*
+* NS1,NP1,NP3,ND3,ND5,NF5,NF7 = (1) [0] for  inclusion (no inclusion) 
+*     of  s1/2, p1/2, p3/2, d3/2, d5/2, f5/2, and f7/2  partial waves
+*
+*  NS     NP1     NP3     ND3    ND5    NF5    NF7
+*
+   0       1       0       0      0      0      0
+*
+* MP   = multipolarity: 0 (M1),  1 (E1),   2 (E2) 
+* SF   = Spectroscopic factor    
+*
+*  MP        SF
+*
+   0         1.00
+*
+* GA  = magnetic moment (in units of the nuclear magneton) of 
+*        particle A (core)
+* GB  = magnetic moment of particle B (proton, neutron, alpha, etc.)
+*
+*   GA         GB
+*
+    -1.7       5.58
+* 
+******************************************************************
